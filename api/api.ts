@@ -28,11 +28,8 @@ export default async function (req: VercelRequest, res: VercelResponse) {
       params.set(key, req.query[key] as string);
   }
   const hitokoto = await getHitokoto(params);
-  const input = new st2vrc.File("hitokoto", ["content"]);
-  const hitokotoStr = `${hitokoto.hitokoto}——${
-    hitokoto.from_who ?? hitokoto.from ?? "佚名"
-  }`;
-  input.push([hitokotoStr]);
+  const input = new st2vrc.File("hitokoto", ["hitokoto", "from_who", "from"]);
+  input.push([hitokoto.hitokoto, hitokoto.from_who, hitokoto.from]);
   await st2vrc.publish([input], outputFile, tempDirPrefix);
 
   const video = fs.readFileSync(outputFile);
