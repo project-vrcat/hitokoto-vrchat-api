@@ -1,0 +1,37 @@
+{
+  "name": "hitokoto-vrchat-api",
+  "version": "1.0.0",
+  "author": {
+    "name": "Gizmo",
+    "email": "cunyu@liuli.lol",
+    "url": "https://github.com/GizmoOAO"
+  },
+  "license": "MIT",
+  "private": true,
+  "homepage": "https://github.com/project-vrcat/hitokoto-vrchat-api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/project-vrcat/hitokoto-vrchat-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/project-vrcat/hitokoto-vrchat-api/issues"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development vc dev",
+    "deploy": "vc deploy"
+  },
+  "devDependencies": {
+    "@types/fluent-ffmpeg": "^2.1.20",
+    "@types/node": "^16.11.7",
+    "@vercel/node": "^1.12.1",
+    "cross-env": "^7.0.3",
+    "typescript": "^4.4.4",
+    "vercel": "^23.1.2"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "axios": "^0.24.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "send_text_to_vrc": "https://github.com/project-vrcat/send_text_to_vrc.git"
+  }
+}

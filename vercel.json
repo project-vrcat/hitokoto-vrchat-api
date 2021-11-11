@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://github.com/project-vrcat/hitokoto-vrchat-api"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/hitokoto.webm",
+      "destination": "/api/api.ts"
+    }
+  ]
+}
